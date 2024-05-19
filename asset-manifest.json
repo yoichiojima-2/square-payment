@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/square-payment/static/css/main.886b85c6.css",
+    "main.css": "/square-payment/static/css/main.ef064f9b.css",
     "main.js": "/square-payment/static/js/main.e6d076dc.js",
     "static/js/453.8dc57040.chunk.js": "/square-payment/static/js/453.8dc57040.chunk.js",
     "index.html": "/square-payment/index.html",
-    "main.886b85c6.css.map": "/square-payment/static/css/main.886b85c6.css.map",
+    "main.ef064f9b.css.map": "/square-payment/static/css/main.ef064f9b.css.map",
     "main.e6d076dc.js.map": "/square-payment/static/js/main.e6d076dc.js.map",
     "453.8dc57040.chunk.js.map": "/square-payment/static/js/453.8dc57040.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.886b85c6.css",
+    "static/css/main.ef064f9b.css",
     "static/js/main.e6d076dc.js"
   ]
 }
