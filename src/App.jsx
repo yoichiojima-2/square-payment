@@ -25,7 +25,7 @@ const App = () => {
       <div className="AppContainer">
         <Logo />
         {squareView ? (
-          <SquareView records={records}/>
+          <SquareView records={records} />
         ) : (
           <Records
             records={records}

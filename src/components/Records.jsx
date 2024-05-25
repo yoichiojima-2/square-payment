@@ -63,7 +63,7 @@ export const RecordsTotalView = ({ records }) => {
     <div>
       <h2>record</h2>
       {records.map((record, index) => (
-        <div key={index} className="Record">
+        <div key={index} className="HStack">
           <p className="RecordName">{record.name}</p>
           <p className="RecordTitle">{record.title}</p>
           <p className="RecordAmount">{record.amount}</p>
@@ -81,10 +81,11 @@ export const RecordsUserView = ({ records }) => {
       <h2>record by user</h2>
       {recordByUser.map((user) => (
         <div key={user.name} className="UserRecords">
-          <div className="UserRecordsHeader">
+          <div className="HStack">
             <h3>{user.name}</h3>
             <h3>{user.totalAmount}</h3>
           </div>
+          <p>tasks</p>
           {user.records.map((record, index) => (
             <div key={index} className="Record">
               <p>{record.title}</p>
