@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { groupByUser } from "./aggregateUser";
+import { groupByUser } from "./aggregate";
 
 export const Records = ({ records, setRecords, sortByUser }) => {
   return (

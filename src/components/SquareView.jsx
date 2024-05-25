@@ -1,8 +1,7 @@
-import { groupByUser } from "./aggregateUser";
+import { getSquareTaskByUser } from "./aggregate";
 
 export const SquareView = ({ records }) => {
-  const recordByUser = groupByUser(records);
-  console.log("record by user", recordByUser);
+  getSquareTaskByUser(records);
 
   return (
     <div id="SquareView">
