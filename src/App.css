@@ -22,6 +22,14 @@
   width: 30%;
 }
 
+.UserRecords {
+  background-color: white;
+  color: cadetblue;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
 .UserSquare {
   background-color: white;
   color: cadetblue;

@@ -85,9 +85,8 @@ export const RecordsUserView = ({ records }) => {
             <h3>{user.name}</h3>
             <h3>{user.totalAmount}</h3>
           </div>
-          <p>tasks</p>
           {user.records.map((record, index) => (
-            <div key={index} className="Record">
+            <div key={index} className="HStack">
               <p>{record.title}</p>
               <p>{record.amount}</p>
             </div>
