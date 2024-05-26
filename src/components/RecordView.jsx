@@ -27,9 +27,7 @@ export const RecordsTotalView = ({ records, setRecords }) => {
                   {unit} {record.amount}
                 </p>
               </div>
-              <div className="Column">
-                <button onClick={() => removeRecord(index)}>delete</button>
-              </div>
+                <button className="SmallButton" onClick={() => removeRecord(index)}>delete</button>
             </div>
           ))
         )}

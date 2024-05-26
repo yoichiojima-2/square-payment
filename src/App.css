@@ -71,3 +71,17 @@
 .Line {
   border-bottom: 1px solid cadetblue;
 }
+
+.SmallButton {
+  font-size: 0.4em;
+  font-weight: 100;
+  width: 34px;
+  padding: 4px 7px;
+  margin: 0px;
+  color: white;
+  background-color: cadetblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
