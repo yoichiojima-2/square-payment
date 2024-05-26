@@ -22,3 +22,18 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.CheckBoxDone {
+  background-color: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+}
+
+.CheckBoxUndone {
+  background-color: cadetblue;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  border: 1px solid white;
+}
