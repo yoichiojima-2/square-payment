@@ -1,8 +1,9 @@
-export const Controls = ({ setViewMode }) => {
+export const Controls = ({ setAddMode, setViewMode }) => {
   return (
     <div id="controls">
-      <button onClick={() => setViewMode("raw")}>raw mode</button>
-      <button onClick={() => setViewMode("userView")}>user view</button>
+      <button onClick={() => setAddMode(true)}>add</button>
+      <button onClick={() => setViewMode("raw")}>raw</button>
+      <button onClick={() => setViewMode("userView")}>user</button>
       <button onClick={() => setViewMode("square")}>square</button>
     </div>
   );

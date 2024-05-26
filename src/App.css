@@ -10,11 +10,17 @@
 }
 
 .Card {
-  /* background-color: white; */
-  /* color: cadetblue; */
+  background-color: white;
+  color: cadetblue;
   padding: 20px;
   margin: 10px 0;
   border-radius: 10px;
+  max-width: 300px;
+}
+
+.VStack {
+  display: flex;
+  flex-direction: column;
 }
 
 .HStack {
@@ -23,17 +29,47 @@
   align-items: center;
 }
 
-.CheckBoxDone {
-  background-color: white;
+.CheckBox.undone {
   height: 20px;
   width: 20px;
+  border: 1px solid cadetblue;
   border-radius: 20px;
 }
 
-.CheckBoxUndone {
-  background-color: cadetblue;
+.CheckBox.done {
   height: 20px;
   width: 20px;
+  background-color: cadetblue;
   border-radius: 20px;
-  border: 1px solid white;
+}
+
+.Modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.Modal.show {
+  display: flex;
+}
+
+.ModalContent {
+  flex-direction: column;
+  color: white;
+}
+
+.AddRecord {
+  background-color: cadetblue;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.Line {
+  border-bottom: 1px solid cadetblue;
 }

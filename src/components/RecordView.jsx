@@ -9,7 +9,9 @@ export const RecordsTotalView = ({ records }) => {
         <div key={index} className="HStack">
           <p>{record.name}</p>
           <p>{record.title}</p>
-          <p>{unit} {record.amount}</p>
+          <p>
+            {unit} {record.amount}
+          </p>
         </div>
       ))}
     </div>
@@ -26,10 +28,11 @@ export const RecordsUserView = ({ records }) => {
         <div key={user.name} className="Card">
           <div className="HStack">
             <h3>{user.name}</h3>
-            <h3>
-              {unit} {user.totalAmount}
-            </h3>
+            <h4>
+              total - {unit} {user.totalAmount}
+            </h4>
           </div>
+          <div className="Line" />
           {user.records.map((record, index) => (
             <div key={index} className="HStack">
               <p>{record.title}</p>

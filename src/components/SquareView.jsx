@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { getUsersWithTasks, getAmountPerUser } from "./aggregate";
 import { unit } from "./config";
-
 
 export const SquareView = ({ records }) => {
   const users = getUsersWithTasks(records);
@@ -19,12 +18,14 @@ export const SquareView = ({ records }) => {
               {unit} {user.totalAmount}
             </h3>
           </div>
-          <h4>todos</h4>
+          <div className="Line" />
           <div>
             {user.tasks.map((task, index) => (
               <div key={`${task}${index}`} className="HStack">
-                <CheckBox key={index}/>
-                <p>{task.from} to {task.to}: {unit} {task.amount}</p>
+                <CheckBox key={index} />
+                <p>
+                  {task.from} to {task.to}: {unit} {task.amount}
+                </p>
               </div>
             ))}
           </div>
@@ -34,18 +35,14 @@ export const SquareView = ({ records }) => {
   );
 };
 
-
 const CheckBox = () => {
   const [completed, setCompleted] = useState(false);
 
   const getClassName = () => {
-    return completed ? "CheckBoxDone" : "CheckBoxUndone";
-  }
+    return completed ? "CheckBox done" : "CheckBox undone";
+  };
 
   return (
-    <div
-      className={getClassName()}
-      onClick={() => setCompleted(!completed)}
-    />
-  )
-}
+    <div className={getClassName()} onClick={() => setCompleted(!completed)} />
+  );
+};

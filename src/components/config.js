@@ -1,1 +1,1 @@
-export const unit = "$";
+export const unit = "¥";
