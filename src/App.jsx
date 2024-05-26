@@ -31,7 +31,9 @@ const App = () => {
             records={records}
             setRecords={setRecords}
           />
-          {viewMode === "raw" && <RecordsTotalView records={records} />}
+          {viewMode === "raw" && (
+            <RecordsTotalView records={records} setRecords={setRecords} />
+          )}
           {viewMode === "userView" && <RecordsUserView records={records} />}
           {viewMode === "square" && <SquareView records={records} />}
         </div>
