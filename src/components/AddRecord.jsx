@@ -19,7 +19,7 @@ const Modal = ({ show, children }) => (
   </div>
 );
 
-export const AddRecordContent = ({ records, setRecords, setShow }) => {
+const AddRecordContent = ({ records, setRecords, setShow }) => {
   const [name, setName] = useState("");
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
