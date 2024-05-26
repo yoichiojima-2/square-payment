@@ -10,9 +10,9 @@ import { AddRecord } from "./components/AddRecord";
 
 const App = () => {
   const [records, setRecords] = useState([
-    { name: "alice", title: "drink", amount: 32 },
-    { name: "alice", title: "desert", amount: 12 },
-    { name: "bob", title: "food", amount: 50 },
+    // { name: "alice", title: "drink", amount: 32 },
+    // { name: "alice", title: "desert", amount: 12 },
+    // { name: "bob", title: "food", amount: 50 },
   ]);
 
   const [viewMode, setViewMode] = useState("raw");
