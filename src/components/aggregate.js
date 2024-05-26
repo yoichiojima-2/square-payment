@@ -94,3 +94,6 @@ export const getSquareAmountByUser = (records) => {
     };
   });
 };
+
+export const removeRecordByIndex = (records, index) =>
+  records.filter((_, _idx) => _idx !== index);
