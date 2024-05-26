@@ -1,23 +1,29 @@
 import { groupByUser } from "./aggregate";
 import { unit } from "./config";
 
-export const RecordsTotalView = ({ records }) => {
-  return (
-    <div>
+export const RecordsTotalView = ({ records }) => (
+  <div>
+    <div className="Card">
       <h2>record</h2>
+      <div className="Line" />
       {records.map((record, index) => (
         <div key={index} className="HStack">
-          <p>{record.name}</p>
-          <p>{record.title}</p>
-          <p>
-            {unit} {record.amount}
-          </p>
+          <div>
+            <p>{record.name}</p>
+          </div>
+          <div>
+            <p>{record.title}</p>
+          </div>
+          <div>
+            <p>
+              {unit} {record.amount}
+            </p>
+          </div>
         </div>
       ))}
     </div>
-  );
-};
-
+  </div>
+);
 export const RecordsUserView = ({ records }) => {
   const recordByUser = groupByUser(records);
 

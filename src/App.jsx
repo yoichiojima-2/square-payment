@@ -9,7 +9,11 @@ import "./index.css";
 import { AddRecord } from "./components/AddRecord";
 
 const App = () => {
-  const [records, setRecords] = useState([]);
+  const [records, setRecords] = useState([
+    { name: "alice", title: "drink", amount: 32 },
+    { name: "alice", title: "desert", amount: 12 },
+    { name: "bob", title: "food", amount: 50 },
+  ]);
 
   const [viewMode, setViewMode] = useState("raw");
   const [addMode, setAddMode] = useState(true);
@@ -32,7 +36,11 @@ const App = () => {
           {viewMode === "square" && <SquareView records={records} />}
         </div>
         <div className="Footer">
-          <Controls setViewMode={setViewMode} setAddMode={setAddMode} />
+          <Controls
+            viewMode={viewMode}
+            setViewMode={setViewMode}
+            setAddMode={setAddMode}
+          />
         </div>
       </div>
     </div>
