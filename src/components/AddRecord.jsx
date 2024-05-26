@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./AddRecord.css";
 
 export const AddRecord = ({ show, setShow, records, setRecords }) => {
   return (
