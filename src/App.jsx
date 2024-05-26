@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Logo } from "./components/Logo";
 import { SquareView } from "./components/SquareView";
-import { Records } from "./components/Records";
+import { RecordsUserView, RecordsTotalView } from "./components/RecordView";
+import { AddRecord } from "./components/AddRecord";
 import { Controls } from "./components/Controls";
 import "./App.css";
 import "./index.css";
@@ -13,32 +14,17 @@ const App = () => {
     { name: "Charles", title: "Crisp", amount: 10 },
   ]);
 
-  const [sortByUser, setSortByUser] = useState(false);
-  const [squareView, setSquareView] = useState(false);
-
-  console.log("records", records);
-  console.log("sortByUser", sortByUser);
-  console.log("squareView", squareView);
+  const [viewMode, setViewMode] = useState("raw");
 
   return (
     <div className="App">
       <div className="AppContainer">
         <Logo />
-        {squareView ? (
-          <SquareView records={records} />
-        ) : (
-          <Records
-            records={records}
-            setRecords={setRecords}
-            sortByUser={sortByUser}
-          />
-        )}
-        <Controls
-          squareView={squareView}
-          setSquareView={setSquareView}
-          sortByUser={sortByUser}
-          setSortByUser={setSortByUser}
-        />
+        <AddRecord records={records} setRecords={setRecords} />
+        {viewMode === "raw" && <RecordsTotalView records={records} />}
+        {viewMode === "userView" && <RecordsUserView records={records} />}
+        {viewMode === "square" && <SquareView records={records} />}
+        <Controls setViewMode={setViewMode} />
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import { getUsersWithTasks, getAmountPerUser } from "./aggregate";
 export const SquareView = ({ records }) => {
   const users = getUsersWithTasks(records);
   const amountPerUser = getAmountPerUser(records);
+
   return (
     <div id="SquareView">
       <h2>square result</h2>

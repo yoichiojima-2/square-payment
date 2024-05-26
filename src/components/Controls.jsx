@@ -1,21 +1,9 @@
-export const Controls = ({
-  squareView,
-  setSquareView,
-  sortByUser,
-  setSortByUser,
-}) => {
+export const Controls = ({ setViewMode }) => {
   return (
     <div id="controls">
-      {!squareView ? (
-        <button onClick={() => setSortByUser(!sortByUser)}>
-          {sortByUser ? "back" : "subtotal by user"}
-        </button>
-      ) : (
-        <></>
-      )}
-      <button onClick={() => setSquareView(!squareView)}>
-        {squareView ? "record management" : "square"}
-      </button>
+      <button onClick={() => setViewMode("raw")}>raw mode</button>
+      <button onClick={() => setViewMode("userView")}>user view</button>
+      <button onClick={() => setViewMode("square")}>square</button>
     </div>
   );
 };

@@ -8,12 +8,10 @@ body {
 }
 
 h1 {
-  font-size: 1.5em;
   font-weight: 700;
 }
 
 p {
-  font-size: 0.8em;
   font-weight: 300;
 }
 
@@ -27,8 +25,6 @@ input {
 
 input::placeholder {
   color: white;
-  display: flex;
-  justify-content: center;
 }
 
 button {
