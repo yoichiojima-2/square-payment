@@ -2,7 +2,6 @@ import { groupByUser } from "./aggregate";
 import { unit } from "./config";
 
 export const RecordsTotalView = ({ records }) => {
-  console.log(unit);
   return (
     <div>
       <h2>record</h2>
