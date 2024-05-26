@@ -1,4 +1,4 @@
-export const Controls = ({ viewMode, setAddMode, setViewMode }) => (
+export const Controls = ({ records, viewMode, setAddMode, setViewMode }) => (
   <div id="controls">
     <button onClick={() => setAddMode(true)}>add</button>
     {viewMode !== "raw" && (
@@ -7,7 +7,7 @@ export const Controls = ({ viewMode, setAddMode, setViewMode }) => (
     {viewMode !== "userView" && (
       <button onClick={() => setViewMode("userView")}>user</button>
     )}
-    {viewMode !== "square" && (
+    {viewMode !== "square" && records.length > 1 && (
       <button onClick={() => setViewMode("square")}>square</button>
     )}
   </div>

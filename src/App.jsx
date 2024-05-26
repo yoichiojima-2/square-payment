@@ -39,6 +39,7 @@ const App = () => {
         </div>
         <div className="Footer">
           <Controls
+            records={records}
             viewMode={viewMode}
             setViewMode={setViewMode}
             setAddMode={setAddMode}

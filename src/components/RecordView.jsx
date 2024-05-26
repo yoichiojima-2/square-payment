@@ -48,25 +48,29 @@ export const RecordsUserView = ({ records }) => {
   return (
     <div>
       <h2>record by user</h2>
-      {recordByUser.map((user) => (
-        <div key={user.name} className="Card">
-          <div className="HStack">
-            <h3>{user.name}</h3>
-            <h4>
-              total - {unit} {user.totalAmount}
-            </h4>
-          </div>
-          <div className="Line" />
-          {user.records.map((record, index) => (
-            <div key={index} className="HStack">
-              <p>{record.title}</p>
-              <p>
-                {unit} {record.amount}
-              </p>
+      {records.length === 0 ? (
+        <p>no records</p>
+      ) : (
+        recordByUser.map((user) => (
+          <div key={user.name} className="Card">
+            <div className="HStack">
+              <h3>{user.name}</h3>
+              <h4>
+                total - {unit} {user.totalAmount}
+              </h4>
             </div>
-          ))}
-        </div>
-      ))}
+            <div className="Line" />
+            {user.records.map((record, index) => (
+              <div key={index} className="HStack">
+                <p>{record.title}</p>
+                <p>
+                  {unit} {record.amount}
+                </p>
+              </div>
+            ))}
+          </div>
+        ))
+      )}
     </div>
   );
 };
