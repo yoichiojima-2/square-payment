@@ -3,10 +3,11 @@ import { Logo } from "./components/Logo";
 import { SquareView } from "./components/SquareView";
 import { RecordsUserView, RecordsTotalView } from "./components/RecordView";
 import { Controls } from "./components/Controls";
+import { AddRecord } from "./components/AddRecord";
 
 import "./App.css";
 import "./index.css";
-import { AddRecord } from "./components/AddRecord";
+
 
 const App = () => {
   const [records, setRecords] = useState([
