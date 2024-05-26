@@ -1,4 +1,3 @@
-/* src/App.css */
 .AppContainer {
   margin: 20px;
   padding: 20px;
@@ -7,32 +6,12 @@
 .Record {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Ensures items are centered vertically */
+  align-items: center;
 }
 
-.RecordName {
-  width: 30%;
-}
-
-.RecordTitle {
-  width: 40%;
-}
-
-.RecordAmount {
-  width: 30%;
-}
-
-.UserRecords {
-  background-color: white;
-  color: cadetblue;
-  padding: 20px;
-  margin: 10px 0;
-  border-radius: 10px;
-}
-
-.UserSquare {
-  background-color: white;
-  color: cadetblue;
+.Card {
+  /* background-color: white; */
+  /* color: cadetblue; */
   padding: 20px;
   margin: 10px 0;
   border-radius: 10px;
