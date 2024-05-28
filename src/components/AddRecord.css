@@ -1,6 +1,11 @@
 .AddRecord {
   background-color: cadetblue;
-  padding: 40px;
-  width: 80%;
   border-radius: 20px;
+  padding: 50px;
+}
+
+.AddRecordButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }

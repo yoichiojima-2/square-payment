@@ -1,5 +1,6 @@
 import { groupByUser, removeRecordByIndex } from "./aggregate";
 import { unit } from "./config";
+import "./RecordView.css";
 
 export const RecordsTotalView = ({ records, setRecords }) => {
   const removeRecord = (index) => {
@@ -28,10 +29,10 @@ export const RecordsTotalView = ({ records, setRecords }) => {
                 </p>
               </div>
               <button
-                className="SmallButton"
+                className="RecordViewButton"
                 onClick={() => removeRecord(index)}
               >
-                delete
+                x
               </button>
             </div>
           ))

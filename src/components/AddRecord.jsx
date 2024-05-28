@@ -41,7 +41,17 @@ const AddRecordContent = ({ records, setRecords, setShow }) => {
   return (
     <div className="AddRecord">
       <div className="VStack">
-        <h2>Add Record</h2>
+        <div className="HStack">
+          <h2>Add Record</h2>
+          <div>
+            <button className="AddRecordButton" onClick={handleSubmit}>
+              +
+            </button>
+            <button className="AddRecordButton" onClick={() => setShow(false)}>
+              x
+            </button>
+          </div>
+        </div>
         <div className="VStack">
           <input
             type="text"
@@ -62,8 +72,6 @@ const AddRecordContent = ({ records, setRecords, setShow }) => {
             onChange={(e) => setAmount(e.target.value)}
           />
         </div>
-        <button onClick={handleSubmit}>+</button>
-        <button onClick={() => setShow(false)}>close</button>
       </div>
     </div>
   );
