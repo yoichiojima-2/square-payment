@@ -8,7 +8,6 @@ import { AddRecord } from "./components/AddRecord";
 import "./App.css";
 import "./index.css";
 
-
 const App = () => {
   const [records, setRecords] = useState([
     { name: "alice", title: "drink", amount: 32 },

@@ -32,9 +32,7 @@ export const RecordsTotalView = ({ records, setRecords }) => {
                 className="RecordViewButton"
                 onClick={() => removeRecord(index)}
               >
-                <div>
-                  x
-                </div>
+                <div>x</div>
               </button>
             </div>
           ))
