@@ -42,7 +42,7 @@ const AddRecordContent = ({ records, setRecords, setShow }) => {
     <div className="AddRecord">
       <div className="VStack">
         <div className="HStack">
-          <h2>Add Record</h2>
+          <h2>Add</h2>
           <div>
             <button className="AddRecordButton" onClick={handleSubmit}>
               <div>+</div>
