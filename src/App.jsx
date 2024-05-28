@@ -1,44 +1,46 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Logo } from "./components/Logo";
 import { SquareView } from "./components/SquareView";
-import { Records } from "./components/Records";
+import { RecordsUserView, RecordsTotalView } from "./components/RecordView";
 import { Controls } from "./components/Controls";
+import { AddRecord } from "./components/AddRecord";
+
 import "./App.css";
 import "./index.css";
 
 const App = () => {
-  const [records, setRecords] = useState([
-    { name: "Alice", title: "Coffee", amount: 5 },
-    { name: "Bob", title: "Wine", amount: 20 },
-    { name: "Charles", title: "Crisp", amount: 10 },
-  ]);
+  const [records, setRecords] = useState([]);
 
-  const [sortByUser, setSortByUser] = useState(false);
-  const [squareView, setSquareView] = useState(false);
-
-  console.log("records", records);
-  console.log("sortByUser", sortByUser);
-  console.log("squareView", squareView);
+  const [viewMode, setViewMode] = useState("raw");
+  const [addMode, setAddMode] = useState(true);
 
   return (
     <div className="App">
       <div className="AppContainer">
-        <Logo />
-        {squareView ? (
-          <SquareView records={records}/>
-        ) : (
-          <Records
+        <div className="Header">
+          <Logo />
+        </div>
+        <div className="Body">
+          <AddRecord
+            show={addMode}
+            setShow={setAddMode}
             records={records}
             setRecords={setRecords}
-            sortByUser={sortByUser}
           />
-        )}
-        <Controls
-          squareView={squareView}
-          setSquareView={setSquareView}
-          sortByUser={sortByUser}
-          setSortByUser={setSortByUser}
-        />
+          {viewMode === "raw" && (
+            <RecordsTotalView records={records} setRecords={setRecords} />
+          )}
+          {viewMode === "userView" && <RecordsUserView records={records} />}
+          {viewMode === "square" && <SquareView records={records} />}
+        </div>
+        <div className="Footer">
+          <Controls
+            records={records}
+            viewMode={viewMode}
+            setViewMode={setViewMode}
+            setAddMode={setAddMode}
+          />
+        </div>
       </div>
     </div>
   );

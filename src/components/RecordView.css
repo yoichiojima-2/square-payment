@@ -1,0 +1,11 @@
+.RecordViewButton {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  font-size: 0.8rem;
+  background-color: cadetblue;
+  color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}

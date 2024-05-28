@@ -1,41 +1,4 @@
-/* src/App.css */
 .AppContainer {
-  margin: 20px;
-}
-
-.Records {
-}
-
-.Record {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Ensures items are centered vertically */
-}
-
-.UserRecords {
-}
-
-.UserRecordsHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Ensures items are centered vertically */
-}
-
-.UserSquareHeader,
-.UserSquareFooter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Ensures items are centered vertically */
-}
-
-.RecordName {
-  width: 30%;
-}
-
-.RecordTitle {
-  width: 40%;
-}
-
-.RecordAmount {
-  width: 30%;
+  margin: 10px;
+  padding: 10px;
 }

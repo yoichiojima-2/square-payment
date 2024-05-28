@@ -1,0 +1,12 @@
+.AddRecord {
+  background-color: cadetblue;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.AddRecordButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1rem;
+}
