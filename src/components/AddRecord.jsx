@@ -45,10 +45,10 @@ const AddRecordContent = ({ records, setRecords, setShow }) => {
           <h2>Add Record</h2>
           <div>
             <button className="AddRecordButton" onClick={handleSubmit}>
-              +
+              <div>+</div>
             </button>
             <button className="AddRecordButton" onClick={() => setShow(false)}>
-              x
+              <div>x</div>
             </button>
           </div>
         </div>
