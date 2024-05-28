@@ -9,11 +9,7 @@ import "./App.css";
 import "./index.css";
 
 const App = () => {
-  const [records, setRecords] = useState([
-    { name: "alice", title: "drink", amount: 32 },
-    { name: "alice", title: "desert", amount: 12 },
-    { name: "bob", title: "food", amount: 50 },
-  ]);
+  const [records, setRecords] = useState([]);
 
   const [viewMode, setViewMode] = useState("raw");
   const [addMode, setAddMode] = useState(true);
