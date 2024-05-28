@@ -9,7 +9,9 @@ export const SquareView = ({ records }) => {
   return (
     <div id="SquareView">
       <h2>square result</h2>
-      <h3>per person: {amountPerUser}</h3>
+      <h3>
+        per person: {unit} {amountPerUser}
+      </h3>
       {users.map((user, index) => (
         <div key={`${user}${index}`} className="Card">
           <div className="HStack">
